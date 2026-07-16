@@ -38,16 +38,9 @@ REACTIONS = [
     "😡"
 ]
 
-dev_text = "👨‍💻 Mind Behind This Bot:\n• @Mr_Mohammed_29\n• @Anime_UpdatesAU"
+dev_text = "👨‍💻 Mind Behind This Bot:\n• @Mr_Mohammed_29\n• @Aero_Unity"
 dev_text = "👨‍💻 Developer: @Mr_Mohammed_29"
-channels_text = "📢 Channel: @Anime_UpdatesAU"
-
-
-if (
-    hashlib.sha256(dev_text.encode('utf-8')).hexdigest() != expected_dev_hash or
-    hashlib.sha256(channels_text.encode('utf-8')).hexdigest() != expected_channels_hash
-):
-    raise Exception("Tampered developer info detected! Bot will not start. Fuck the code - crashing now.")
+channels_text = "📢 Channel: @Aero_Unity"
 
 class script(object):
 
@@ -86,7 +79,7 @@ class script(object):
 <b>├⍟ 📚 Library : <a href='https://docs.pyrogram.org/'>Pyrogram Async</a></b>
 <b>├⍟ 🐍 Language : <a href='https://www.python.org/'>Python 3.11+</a></b>
 <b>├⍟ 🗄 Database : <a href='https://www.mongodb.com/'>MongoDB Atlas Cluster</a></b>
-<b>├⍟ 📡 Hosting : Dedicated High-Speed VPS</b>
+<b>├⍟ 📡 Hosting : Render</b>
 <b>╰───────────────⍟</b></blockquote>
 """
     PREMIUM_TEXT = """<b>💎 Premium Membership Plans</b>
@@ -186,9 +179,9 @@ def progress(current, total, message, type):
     if not hasattr(progress, "cache"):
         progress.cache = {}
 
-    now = time.time()
-    task_id = f"{message.id}{type}"
-    last_time = progress.cache.get(task_id, 0)
+        now = time.time()
+        task_id = f"{message.id}{type}"
+        last_time = progress.cache.get(task_id, 0)
 
     if not hasattr(progress, "start_time"):
         progress.start_time = {}
